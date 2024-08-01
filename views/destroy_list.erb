@@ -1,0 +1,17 @@
+<section id="todos">
+    <header>
+        <h2>Deleting "<%= @list[:name] %>"</h2>
+    </header>
+</section>
+        
+    <dl>
+        <dt>
+            <label for="list_name">Are you sure you want to delete this list? Once deleted, the effects will be permanent.</label>
+        </dt>
+    </dl>
+        <fieldset class="actions">
+            <form action="/lists/<%= params[:id] %>/destroy" method="post">
+            <button type="submit" class="delete">Delete List</button>
+            </form>
+            <a href="/lists/<%= params[:id]%>">Cancel</a>
+        </fieldset>
